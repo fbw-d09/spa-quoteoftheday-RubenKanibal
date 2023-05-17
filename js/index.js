@@ -14,3 +14,36 @@ const quotes = [
   ];
 
 // Write your Javascriot code here
+
+
+
+const h1 = document.querySelector("h1");
+h1.style.textAlign = "center";
+h1.style.marginTop = "5%";
+const container = document.querySelector("#container");
+container.style.display = "flex";
+container.style.justifyContent = "center";
+container.style.flexDirection = "row";
+const box = document.querySelector("#box");
+box.style.width = "55%";
+box.style.height = "25px";
+box.style.border = "2px solid grey";
+box.style.borderRadius = "5px";
+
+const button = document.querySelector("button");
+const paragraph = document.querySelector("p");
+
+button.style.marginLeft = "22.5%";
+button.style.marginTop = "10px";
+paragraph.style.margin = "0";
+paragraph.style.lineHeight = "25px";
+paragraph.style.paddingLeft = "5px";
+
+button.onclick = () => {
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+
+function showQuote() {
+  return quotes[randomQuote];
+}
+  paragraph.innerText = showQuote();
+}
